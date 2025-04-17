@@ -7,5 +7,6 @@ reason_field = Pattern("reason_field.png").targetOffset(0,12)
 cancel_button = Pattern("cancel_button.png").targetOffset(0,6)
 # Кликаем изображение в указанной области
 click(area.find(bet_delete))
+wait(1)
 type(area.find(reason_field), "Peredumal")
 click(area.find(cancel_button))
