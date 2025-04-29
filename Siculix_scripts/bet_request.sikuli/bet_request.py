@@ -2,11 +2,9 @@ from sikuli import *
 # Область экрана, на которой выполняется поиск элементов
 area = Region(1925,100,1913,937)
 # Путь к файлу изображений, которые нужно найти
-bet_delete = Pattern("bet_delete.png").targetOffset(0,6)
+bet_request_field = Pattern("bet_request_field.png").targetOffset(-39,2)
 reason_field = Pattern("reason_field.png").targetOffset(0,18)
-cancel_button = Pattern("cancel_button.png").targetOffset(0,6)
 # Кликаем изображение в указанной области
-click(area.find(bet_delete))
+click(area.find(bet_request_field))
 wait(1)
-type(area.find(reason_field), "464354646")
-click(area.find(cancel_button))
+type(area.find(bet_request_field), "100500")
